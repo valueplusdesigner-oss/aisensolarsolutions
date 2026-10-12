@@ -1,0 +1,4 @@
+# Copy to .dev.vars locally, never commit actual values
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD_HASH=replace-with-bcrypt-hash
+SESSION_SECRET=replace-with-long-random-secret
