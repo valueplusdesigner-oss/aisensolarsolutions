@@ -1,0 +1,3 @@
+# Prevent static staging pages and files from appearing in search results.
+https://:worker.:account.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
