@@ -30,3 +30,7 @@ test('CSV escaping protects against malicious spreadsheet formulas and preserves
   assert.equal(quoteCsvCell('Normal " customer'), '"Normal "" customer"');
   assert.equal(quoteCsvCell(null), '""');
 });
+
+test('Cloudflare staging explicitly requires admin secrets', () => {
+  assert.deepEqual(new Set(config.secrets?.required || []), new Set(['ADMIN_EMAIL', 'ADMIN_PASSWORD_HASH', 'SESSION_SECRET']));
+});
