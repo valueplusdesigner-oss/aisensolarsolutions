@@ -19,7 +19,7 @@
     {
       "binding": "DB",
       "database_name": "aisen-solar-staging",
-      "database_id": "REPLACE_AFTER_D1_CREATION",
+      "database_id": "23a1c337-6c18-4644-8082-675026a8929e",
       "migrations_dir": "migrations"
     }
   ],
