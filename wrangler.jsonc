@@ -23,14 +23,12 @@
       "migrations_dir": "migrations"
     }
   ],
-  "r2_buckets": [
-    {
-      "binding": "MEDIA",
-      "bucket_name": "aisen-solar-staging-media"
-    }
-  ],
   "secrets": {
-    "required": ["ADMIN_EMAIL", "ADMIN_PASSWORD_HASH", "SESSION_SECRET"]
+    "required": [
+      "ADMIN_EMAIL",
+      "ADMIN_PASSWORD_HASH",
+      "SESSION_SECRET"
+    ]
   },
   "vars": {
     "SITE_ORIGIN": "https://www.aisensolarsolutions.com"

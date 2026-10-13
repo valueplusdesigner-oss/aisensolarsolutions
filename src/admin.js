@@ -180,6 +180,9 @@ async function dashboard(request, env) {
     const editing = editId ? postsQ.results.find((row) => Number(row.id) === editId) : null;
     content = blogPanel(postsQ.results, editing, csrf);
   }
+  if (!env.MEDIA) {
+    content = content.replace(/<input type="file"[^>]*>/g, '<span class="muted">New image uploads are temporarily unavailable. Existing images are unchanged.</span>');
+  }
   const flash = clean(url.searchParams.get('saved'), 200);
   const error = clean(url.searchParams.get('error'), 200);
   return page('Dashboard', `<header class="topbar"><img src="/aisen-solar-logo.png" alt="Aisen Solar Solutions"><div><a href="/" target="_blank">View website ↗</a><form class="inline-form" method="post" action="/aisen-preview/admin/logout"><button>Sign out</button></form></div></header><main class="admin-shell"><small>AISEN WEBSITE CMS</small><h1>Cloudflare CMS</h1><nav class="admin-nav">${nav}</nav>${flash ? `<p class="flash">${e(flash)}</p>` : ''}${error ? `<p class="flash error">${e(error)}</p>` : ''}${content}</main>`);
@@ -255,6 +258,9 @@ async function action(request, env) {
   const actionName = clean(form.get('action'), 80);
   const tabMap = { brands:'brands', difference_stats:'difference', offices:'contact', testimonials:'testimonials', projects:'projects' };
   try {
+    if (!env.MEDIA && [...form.values()].some(value => value instanceof File && value.size > 0)) {
+      throw new Error('New image uploads are temporarily unavailable. Remove the attachment to save text changes.');
+    }
     if (actionName === 'save_settings') {
       for (const [key, value] of form.entries()) {
         if (!allowedSettingKeys.has(key)) continue;

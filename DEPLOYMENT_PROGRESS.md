@@ -22,3 +22,7 @@
 
 ## Production safety
 Do not touch GoDaddy domain registration, live hosting, nameservers, MX/SPF/DKIM/DMARC, email, or production DNS. A later production cutover requires separate approval and a fresh backup. No production deployment has been performed.
+
+## R2 deferred (2026-10-13)
+
+R2 is optional and is not configured for this staging deployment. Existing bundled images remain available; new Admin image uploads are disabled until the MEDIA binding is configured. Text editing remains available after database and Admin setup. The staging D1 database is created and its ID is configured. Apply the empty schema and configure Admin secrets before runtime validation. No subscription has been activated.

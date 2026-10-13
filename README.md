@@ -68,3 +68,7 @@ Review the export for customer information; only then import via Cloudflare D1. 
 
 - Added explicit `/aisen-preview/admin` to `/aisen-preview/admin/` redirect in the Worker.
 - Staging Worker responses and static assets both receive `X-Robots-Tag: noindex, nofollow` on workers.dev; this does not change production DNS or content headers.
+
+## R2 deferred (2026-10-13)
+
+R2 is optional and is not configured for this staging deployment. Existing bundled images remain available; new Admin image uploads are disabled until the MEDIA binding is configured. Text editing remains available after database and Admin setup. The staging D1 database is created and its ID is configured. Apply the empty schema and configure Admin secrets before runtime validation. No subscription has been activated.

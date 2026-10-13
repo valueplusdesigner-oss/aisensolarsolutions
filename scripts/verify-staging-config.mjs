@@ -15,7 +15,7 @@ export function stagingConfigErrors(config) {
   if (!databases[0]?.database_id || databases[0].database_id === 'REPLACE_AFTER_D1_CREATION') {
     errors.push('Replace the placeholder with the actual staging D1 database ID.');
   }
-  if (!(config?.r2_buckets || []).some(({ binding, bucket_name }) => binding === 'MEDIA' && bucket_name === 'aisen-solar-staging-media')) {
+  if ((config?.r2_buckets || []).some(({ binding, bucket_name }) => binding !== 'MEDIA' || bucket_name !== 'aisen-solar-staging-media')) {
     errors.push('Binding MEDIA must use the staging R2 bucket.');
   }
   for (const route of ['/aisen-preview/api/*', '/aisen-preview/admin/*', '/blog/*', '/media/*']) {
