@@ -20,6 +20,8 @@ function safeInlineMarkdown(text) {
   let s = esc(text);
   s = s.replace(/`([^`\n]+)`/g, (_, code) => `<code>${code}</code>`);
   s = s.replace(/\[([^\]\n]+)\]\(([^)\s]+)\)/g, (all, label, href) => {
+    // Entities created by esc() are safe for HTML attrs, but need conversion
+    // only to check their original scheme before re-escaping.
     const decoded = href.replaceAll('&amp;', '&');
     const allowed = safeUrl(decoded);
     return allowed ? `<a href="${esc(allowed)}" rel="nofollow noopener noreferrer">${label}</a>` : all;
@@ -68,6 +70,7 @@ const permitted = new Set(['p','br','h1','h2','h3','h4','h5','h6','strong','b','
 const voidTags = new Set(['br','hr','img']);
 
 function escapeHtmlText(value) {
+  // Keep existing character entities when editing previously saved rich HTML.
   return String(value).replace(/&(?!(?:#[0-9]+|#x[0-9a-f]+|[a-z][a-z0-9]+);)/gi, '&amp;')
     .replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 }
@@ -99,6 +102,8 @@ function sanitizeHtml(input) {
 
 export function renderArticleHtml(value) {
   const source = String(value ?? '').replaceAll('\uFFFD', '');
+  // Rich editor output has block/inline HTML; original blog migration contains
+  // Markdown rather than HTML. Handle each format without double-escaping.
   return /<\/?(?:p|h[1-6]|ul|ol|li|div|span|strong|b|em|i|a|blockquote|table|img|br)\b/i.test(source)
     ? sanitizeHtml(source)
     : markdownToHtml(source);

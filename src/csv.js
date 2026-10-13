@@ -7,6 +7,6 @@ export function quoteCsvCell(value) {
   const raw = String(value ?? '');
   // Place apostrophe at the very start, even when a formula follows spaces.
   // Spreadsheet tools generally treat leading apostrophes as text markers.
-  const escapedFormula = /^\s*[=+\-@]/u.test(raw) ? `'${raw}` : raw;
+  const escapedFormula = /^\s*[=+\-@]/u.test(raw) ? `\'${raw}` : raw;
   return `"${escapedFormula.replaceAll('"', '""')}"`;
 }

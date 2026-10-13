@@ -29,14 +29,10 @@
       "bucket_name": "aisen-solar-staging-media"
     }
   ],
+  "secrets": {
+    "required": ["ADMIN_EMAIL", "ADMIN_PASSWORD_HASH", "SESSION_SECRET"]
+  },
   "vars": {
     "SITE_ORIGIN": "https://www.aisensolarsolutions.com"
-  },
-  "secrets": {
-    "required": [
-      "ADMIN_EMAIL",
-      "ADMIN_PASSWORD_HASH",
-      "SESSION_SECRET"
-    ]
   }
 }

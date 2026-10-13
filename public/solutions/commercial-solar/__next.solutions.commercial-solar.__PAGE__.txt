@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[5163,["48","static/chunks/48-9e9dabbe08534740.js","340","static/chunks/app/solutions/commercial-solar/page-91178f94941be8cb.js"],"default"]
+3:I[2039,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"kind":"commercial"}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"h1SMeEMxeg_bsqSBvmpZj"}
+5:null
