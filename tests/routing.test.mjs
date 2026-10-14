@@ -25,3 +25,9 @@ test('Staging static assets receive an X-Robots-Tag rule', () => {
   assert.match(headers, /\.workers\.dev\/\*/);
   assert.match(headers, /X-Robots-Tag: noindex, nofollow/);
 });
+
+test('admin and blog styles/scripts use static routing while admin pages remain protected', async () => {
+  const { isWorkerStaticAsset } = await import('../src/routing.js');
+  for (const path of ['/blog/blog.css','/blog/blog-rich-content.css','/aisen-preview/admin/admin-dashboard.css','/aisen-preview/admin/admin-dashboard.js','/aisen-preview/admin/blog-editor.js']) assert.equal(isWorkerStaticAsset(path),true,path);
+  for (const path of ['/aisen-preview/admin/','/aisen-preview/admin/action','/aisen-preview/admin/index.html','/aisen-preview/admin/config.php','/blog/example/']) assert.equal(isWorkerStaticAsset(path),false,path);
+});

@@ -2,7 +2,7 @@ import { handleAdmin } from './admin.js';
 import { mediaResponse } from './media.js';
 import { ensureContentRecovery } from './recovery.js';
 import { renderArticleHtml } from './article.js';
-import { adminRootLocation, addStagingResponseHeaders } from './routing.js';
+import { adminRootLocation, addStagingResponseHeaders, isWorkerStaticAsset } from './routing.js';
 
 const JSON_HEADERS = {
   'content-type': 'application/json; charset=utf-8',
@@ -240,6 +240,7 @@ export default {
     const url = new URL(request.url);
     const handle = async () => {
     try {
+      if (isWorkerStaticAsset(url.pathname)) return env.ASSETS.fetch(request);
       if (url.pathname.startsWith('/aisen-preview/api/') || url.pathname.startsWith('/aisen-preview/admin') || url.pathname.startsWith('/blog') || url.pathname.startsWith('/media/')) await ensureContentRecovery(env);
       const adminRedirect = adminRootLocation(url.pathname);
       if (adminRedirect) {
