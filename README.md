@@ -1,6 +1,6 @@
 # Aisen Solar Solutions — Cloudflare staging package
 
-This recovered package is a **pre-production review build**. It is not deployed and is not ready for DNS cutover.
+This package is deployed to the public **Cloudflare staging preview**. It is not ready for DNS cutover.
 
 ## Safety boundaries
 
@@ -72,3 +72,11 @@ Review the export for customer information; only then import via Cloudflare D1. 
 ## R2 deferred (2026-10-13)
 
 R2 is optional and is not configured for this staging deployment. Existing bundled images remain available; new Admin image uploads are disabled until the MEDIA binding is configured. Text editing remains available after database and Admin setup. The staging D1 database is created and its ID is configured. Apply the empty schema and configure Admin secrets before runtime validation. No subscription has been activated.
+
+## CMS recovery and interface repair — 14 October 2026
+
+- Added a dedicated responsive Admin interface: sidebar, overview, compact record editors and grouped contact forms.
+- Recovery restores published website content once using the existing staging D1 binding. `INSERT OR IGNORE` preserves records already edited in staging; private enquiry records and credentials are excluded. Current public contact details, visibility choices and published articles were reconciled with the saved CMS backup.
+- Added image uploads without activating R2. Images are resized in the browser and saved in staging D1 with a 1 MiB server limit. Existing R2 support is retained.
+- No original project-photo records exist in the saved database or current production content API. Project photos must be supplied as original uploads; no stock photos are substituted for installations.
+- GoDaddy hosting, domain and email settings remain unchanged.

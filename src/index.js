@@ -1,4 +1,6 @@
 import { handleAdmin } from './admin.js';
+import { mediaResponse } from './media.js';
+import { ensureContentRecovery } from './recovery.js';
 import { renderArticleHtml } from './article.js';
 import { adminRootLocation, addStagingResponseHeaders } from './routing.js';
 
@@ -238,19 +240,13 @@ export default {
     const url = new URL(request.url);
     const handle = async () => {
     try {
+      if (url.pathname.startsWith('/aisen-preview/api/') || url.pathname.startsWith('/aisen-preview/admin') || url.pathname.startsWith('/blog') || url.pathname.startsWith('/media/')) await ensureContentRecovery(env);
       const adminRedirect = adminRootLocation(url.pathname);
       if (adminRedirect) {
         return new Response(null, { status: 308, headers: { location: adminRedirect, 'cache-control': 'no-store' } });
       }
       if (url.pathname.startsWith('/media/')) {
-        const key = decodeURIComponent(url.pathname.slice('/media/'.length));
-        if (!key || key.includes('..')) return new Response('Not found', { status: 404 });
-        const object = await env.MEDIA?.get(key);
-        if (!object) return new Response('Not found', { status: 404 });
-        const headers = new Headers();
-        object.writeHttpMetadata(headers);
-        headers.set('etag', object.httpEtag);
-        return new Response(object.body, { headers });
+        return mediaResponse(request,env,decodeURIComponent(url.pathname.slice('/media/'.length)));
       }
       if (url.pathname === '/aisen-preview/api/content.php') {
         return request.method === 'GET' ? contentApi(env) : json({ error: 'Method not allowed.' }, 405);
