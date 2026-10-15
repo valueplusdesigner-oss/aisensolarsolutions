@@ -1,4 +1,5 @@
 import { handleAdmin } from './admin.js';
+import { sitemapResponse } from './seo.js';
 import { mediaResponse } from './media.js';
 import { ensureContentRecovery } from './recovery.js';
 import { renderArticleHtml } from './article.js';
@@ -225,7 +226,7 @@ async function blogPage(request, env) {
     const description = post.seo_description || post.excerpt || stripTags(post.content).slice(0, 190);
     const canonical = `${url.origin}/blog/${encodeURIComponent(post.slug)}/`;
     const body = `<main class="article"><a class="back" href="/blog/">← All solar insights</a><article><div class="article-head"><p class="eyebrow">${escapeHtml(post.category)}</p><h1>${escapeHtml(post.title)}</h1>${post.excerpt ? `<p class="article-lead">${escapeHtml(post.excerpt)}</p>` : ''}<p class="byline">${escapeHtml(post.author_name)} <span>·</span> ${escapeHtml(blogDate(post.published_at || post.created_at))}</p></div>${post.featured_image ? `<figure><img src="${escapeHtml(post.featured_image)}" alt="${escapeHtml(post.title)}"></figure>` : ''}<div class="article-body rich-article">${renderArticleHtml(post.content)}</div></article><aside><p class="eyebrow">START YOUR SOLAR JOURNEY</p><h2>Find the right solar solution for your property.</h2><a href="/#contact">Book a free site survey ↗</a></aside></main>`;
-    return new Response(blogShell(title, description, body, canonical, post), { headers: { 'content-type': 'text/html; charset=utf-8' } });
+    return new Response(blogShell(title, description, body, canonical, post), { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control':'no-store' } });
   }
 
   const category = clean(url.searchParams.get('category'), 100);
@@ -240,7 +241,7 @@ async function blogPage(request, env) {
   const body = `<main class="blog-wrap"><section class="blog-hero"><div><p class="eyebrow">AISEN SOLAR KNOWLEDGE HUB</p><h1>Solar Insights & Guides</h1><p class="hero-intro">Practical advice for rooftop solar, EPC, savings and maintenance.</p></div></section><section class="blog-grid" aria-label="Solar articles">${cards || '<div class="empty-blog"><h2>No articles published yet.</h2><p>New solar insights will appear here.</p></div>'}</section></main>`;
   const title = 'Solar Insights & Guides | Aisen Solar Solutions';
   const description = 'Expert articles about rooftop solar, solar EPC, savings, subsidy, net metering and solar maintenance from Aisen Solar Solutions.';
-  return new Response(blogShell(title, description, body, `${url.origin}/blog/`), { headers: { 'content-type': 'text/html; charset=utf-8' } });
+  return new Response(blogShell(title, description, body, `${url.origin}/blog/`), { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control':'no-store' } });
 }
 
 export default {
@@ -249,7 +250,8 @@ export default {
     const handle = async () => {
     try {
       if (isWorkerStaticAsset(url.pathname)) return env.ASSETS.fetch(request);
-      if (url.pathname.startsWith('/aisen-preview/api/') || url.pathname.startsWith('/aisen-preview/admin') || url.pathname.startsWith('/blog') || url.pathname.startsWith('/media/')) await ensureContentRecovery(env);
+      if (url.pathname === '/sitemap.xml' || url.pathname.startsWith('/aisen-preview/api/') || url.pathname.startsWith('/aisen-preview/admin') || url.pathname.startsWith('/blog') || url.pathname.startsWith('/media/')) await ensureContentRecovery(env);
+      if (url.pathname === '/sitemap.xml') return sitemapResponse(env);
       const adminRedirect = adminRootLocation(url.pathname);
       if (adminRedirect) {
         return new Response(null, { status: 308, headers: { location: adminRedirect, 'cache-control': 'no-store' } });

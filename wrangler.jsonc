@@ -12,7 +12,8 @@
       "/blog/*",
       "/aisen-preview/admin",
       "/aisen-preview/admin/*",
-      "/media/*"
+      "/media/*",
+      "/sitemap.xml"
     ]
   },
   "d1_databases": [
