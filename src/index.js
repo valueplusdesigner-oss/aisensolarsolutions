@@ -190,7 +190,7 @@ async function enquiryApi(request, env) {
     success: true,
     enquiryId: Number(result.meta.last_row_id),
     emailSent: false,
-    message: 'Thank you. Your enquiry has been received.',
+    message: `Thank you. Your enquiry has been received. Reference #${Number(result.meta.last_row_id)}.`,
   }, 201);
 }
 

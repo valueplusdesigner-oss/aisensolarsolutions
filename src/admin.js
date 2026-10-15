@@ -1,6 +1,7 @@
 import { renderArticleHtml } from './article.js';
 import { compare } from 'bcryptjs';
 import { quoteCsvCell } from './csv.js';
+import { importEnquiries } from './enquiry-import.js';
 import { storeImage, deleteStoredImage } from './media.js';
 
 const COOKIE = 'aisen_admin_session';
@@ -151,8 +152,8 @@ function rowPanel(title, rows, csrf, type, extras = {}) {
   return `<section class="panel"><div class="panel-heading"><h2>${e(title)} <span class="count">${rows.length}</span></h2><p class="muted">Select an item to edit its details.</p></div><div class="records">${rows.length ? rows.map(row=>render(row)).join('') : '<p class="empty-inline">No items yet. Add your first item below.</p>'}${render()}</div></section>`;
 }
 
-function enquiriesPanel(rows) {
-  return `<section class="panel"><div class="actions"><h2 style="margin-right:auto">Website enquiries</h2><a href="/aisen-preview/admin/export.csv">Export CSV</a></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Name</th><th>Contact</th><th>City</th><th>Requirement</th><th>Details</th></tr></thead><tbody>${rows.length ? rows.map((row) => `<tr><td>${e(row.created_at)}</td><td>${e(row.name)}</td><td>${e(row.phone)}<br><span class="muted">${e(row.email || '')}</span></td><td>${e(row.city)}</td><td>${e(row.requirement)}</td><td>${e(row.monthly_bill || '')}<br><span class="muted">${e(row.message || '')}</span></td></tr>`).join('') : '<tr><td colspan="6" class="empty-inline">No enquiries yet. New website enquiries will appear here.</td></tr>'}</tbody></table></div></section>`;
+function enquiriesPanel(rows, csrf = null) {
+  return `<section class="panel"><div class="actions"><h2 style="margin-right:auto">Website enquiries</h2><a class="button secondary" href="?tab=enquiries">Refresh enquiries</a><a href="/aisen-preview/admin/export.csv">Export CSV</a></div><div class="table-wrap"><table><thead><tr><th>Reference / date</th><th>Name</th><th>Contact</th><th>City</th><th>Requirement</th><th>Details</th></tr></thead><tbody>${rows.length ? rows.map((row) => `<tr><td><b>#${Number(row.id)}</b><br>${e(row.created_at)}</td><td>${e(row.name)}</td><td>${e(row.phone)}<br><span class="muted">${e(row.email || '')}</span></td><td>${e(row.city)}</td><td>${e(row.requirement)}</td><td>${e(row.monthly_bill || '')}<br><span class="muted">${e(row.message || '')}</span></td></tr>`).join('') : '<tr><td colspan="6" class="empty-inline">No enquiries yet. New website enquiries will appear here.</td></tr>'}</tbody></table></div></section>${csrf ? `<section class="panel"><details><summary>Recover enquiries from a backup</summary><p class="muted">Import a private JSON backup. Original dates are preserved; identical entries are skipped. Existing enquiries stay available.</p><form method="post" enctype="multipart/form-data" action="/aisen-preview/admin/action"><label>Enquiry backup<input type="file" name="enquiry_backup" accept=".json,application/json" required></label>${hidden(csrf,'import_enquiries')}<button type="submit">Recover enquiries</button></form></details></section>` : ''}`;
 }
 
 function blogPanel(posts, editing, csrf, extrasNewArticle=false) {
@@ -170,7 +171,7 @@ async function dashboard(request, env) {
     env.DB.prepare('SELECT * FROM cms_settings'), env.DB.prepare('SELECT * FROM cms_brands ORDER BY sort_order,id'),
     env.DB.prepare('SELECT * FROM cms_difference_stats ORDER BY sort_order,id'), env.DB.prepare('SELECT * FROM cms_offices ORDER BY sort_order,id'),
     env.DB.prepare('SELECT * FROM cms_projects ORDER BY sort_order,id'), env.DB.prepare('SELECT * FROM cms_testimonials ORDER BY sort_order,id'),
-    env.DB.prepare('SELECT * FROM enquiries ORDER BY id DESC LIMIT 500'), env.DB.prepare('SELECT * FROM cms_blog_posts ORDER BY created_at DESC,id DESC'),
+    env.DB.prepare('SELECT * FROM enquiries ORDER BY created_at DESC,id DESC LIMIT 500'), env.DB.prepare('SELECT * FROM cms_blog_posts ORDER BY created_at DESC,id DESC'),
     env.DB.prepare('SELECT * FROM cms_project_images ORDER BY sort_order,id'),
   ]);
   const settings = Object.fromEntries(settingsQ.results.map((row) => [row.setting_key, row.setting_value]));
@@ -178,7 +179,7 @@ async function dashboard(request, env) {
     .map(([key,label]) => `<a class="${tab === key ? 'active' : ''}" href="?tab=${key}">${label}</a>`).join('');
   let content;
   if (tab === 'overview') content = `<section class="metric-grid">${[['Enquiries',enquiriesQ.results.length,'enquiries'],['Projects',projectsQ.results.length,'projects'],['Articles',postsQ.results.length,'blog'],['Visible brands',brandsQ.results.filter(r=>Number(r.is_active)).length,'brands']].map(([label,value,key])=>`<a class="metric" href="?tab=${key}"><span>${label}</span><strong>${value}</strong><small>Manage ${label.toLowerCase()} →</small></a>`).join('')}</section><section class="panel"><h2>Manage your website</h2><p class="muted">Keep your project photos, contact details and solar insights up to date.</p><div class="quick-links"><a href="?tab=projects">Projects & photos <span>→</span></a><a href="?tab=contact">Contact & offices <span>→</span></a><a href="?tab=blog&new=1">Write an article <span>→</span></a><a href="?tab=difference">Installation counters <span>→</span></a></div></section>${enquiriesPanel(enquiriesQ.results.slice(0,5))}`;
-  else if (tab === 'enquiries') content = enquiriesPanel(enquiriesQ.results);
+  else if (tab === 'enquiries') content = enquiriesPanel(enquiriesQ.results, csrf);
   else if (tab === 'contact') content = settingsPanel('contact', settings, csrf) + rowPanel('Offices', officesQ.results, csrf, 'offices');
   else if (tab === 'projects') {
     const projectImages = {};
@@ -264,6 +265,10 @@ async function action(request, env) {
   const actionName = clean(form.get('action'), 80);
   const tabMap = { brands:'brands', difference_stats:'difference', offices:'contact', testimonials:'testimonials', projects:'projects' };
   try {
+    if (actionName === 'import_enquiries') {
+      const {imported,skipped} = await importEnquiries(form.get('enquiry_backup'),env);
+      return redirect('/aisen-preview/admin/?tab=enquiries&saved='+encodeURIComponent(`${imported} enquiries recovered; ${skipped} duplicates skipped.`));
+    }
     if (actionName === 'save_settings') {
       for (const [key, value] of form.entries()) {
         if (!allowedSettingKeys.has(key)) continue;
@@ -316,7 +321,7 @@ async function action(request, env) {
 }
 
 async function csvExport(env) {
-  const rows = (await env.DB.prepare('SELECT * FROM enquiries ORDER BY id DESC').all()).results;
+  const rows = (await env.DB.prepare('SELECT * FROM enquiries ORDER BY created_at DESC,id DESC').all()).results;
   const columns = ['id','created_at','name','phone','email','city','requirement','monthly_bill','message','source_page','email_sent'];
   const csv = [columns.join(','), ...rows.map((row) => columns.map((column) => quoteCsvCell(row[column])).join(','))].join('\r\n');
   return new Response(`\uFEFF${csv}`, { headers: { 'content-type':'text/csv; charset=utf-8', 'content-disposition':`attachment; filename="aisen-enquiries-${new Date().toISOString().slice(0,10)}.csv"` } });
