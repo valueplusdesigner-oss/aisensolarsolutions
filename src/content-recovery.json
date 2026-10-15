@@ -1,0 +1,726 @@
+{
+  "batch": [
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_address",
+        "D-89, DSIIDC Industrial Area, Sector 1, Bawana, New Delhi 110039",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_email",
+        "info@aisensolarsolutions.com",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_hours",
+        "Monday–Saturday · 9:30 AM–6:30 PM",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_phone_display",
+        "+91 82859 23060",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_phone_href",
+        "+918285923060",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "contact_whatsapp",
+        "9266245666",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "corporate_enquiry_email",
+        "b2bsales@aisensolarsolutions.com",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "corporate_enquiry_phone_display",
+        "9266245666",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "corporate_enquiry_phone_href",
+        "9266245666",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "difference_accent",
+        "your life.",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "difference_description",
+        "From your first electricity bill analysis to decades of clean energy, Aisen handles every detail with uncompromising engineering and care.",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "difference_headline",
+        "Solar, engineered around",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "difference_kicker",
+        "01 · THE AISEN DIFFERENCE",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "difference_link_text",
+        "Discover our approach",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "general_enquiry_email",
+        "info@aisensolarsolutions.com",
+        "2026-08-07 04:53:30"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "general_enquiry_phone_display",
+        "9266245666",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_settings (setting_key,setting_value,updated_at) VALUES (?,?,?)",
+      "params": [
+        "general_enquiry_phone_href",
+        "9266245666",
+        "2026-08-07 05:14:19"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "WAAREE",
+        1,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        2,
+        "TATA POWER SOLAR",
+        2,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        3,
+        "ADANI SOLAR",
+        3,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        4,
+        "VIKRAM SOLAR",
+        4,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        5,
+        "LONGi",
+        5,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:45:35",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        6,
+        "JA SOLAR",
+        6,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:45:47",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        7,
+        "JinkoSolar",
+        7,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:45:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        8,
+        "Trina Solar",
+        8,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:45:57",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        9,
+        "Growatt",
+        9,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:46:00",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        10,
+        "SUNGROW",
+        10,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:46:04",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        11,
+        "Solis",
+        11,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:46:09",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        12,
+        "GoodWe",
+        12,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:46:14",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        13,
+        "Polycab",
+        13,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        14,
+        "HAVELLS",
+        14,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        15,
+        "ABB",
+        15,
+        0,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:17:46",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_brands (id,brand_name,sort_order,is_active,created_at,updated_at,logo_path) VALUES (?,?,?,?,?,?,?)",
+      "params": [
+        16,
+        "Schneider",
+        16,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51",
+        null
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_difference_stats (id,stat_value,stat_suffix,stat_label,sort_order,is_active,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "1000",
+        "+",
+        "Successful installations",
+        1,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-06 03:47:53"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_difference_stats (id,stat_value,stat_suffix,stat_label,sort_order,is_active,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)",
+      "params": [
+        2,
+        "20",
+        "MW+",
+        "Clean capacity installed",
+        2,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_difference_stats (id,stat_value,stat_suffix,stat_label,sort_order,is_active,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)",
+      "params": [
+        3,
+        "25",
+        "yrs",
+        "Panel performance warranty",
+        3,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_difference_stats (id,stat_value,stat_suffix,stat_label,sort_order,is_active,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?)",
+      "params": [
+        4,
+        "98",
+        "%",
+        "Customer satisfaction",
+        4,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-04 11:08:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_offices (id,office_type,office_name,address_text,phone_display,phone_href,email,sort_order,is_active,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "Head Office",
+        "",
+        "J-62, Sector-63, Noida",
+        "9266245666",
+        "9266245666",
+        "b2bsales@aisensolarsolutions.com",
+        1,
+        1,
+        "2026-08-07 04:53:30",
+        "2026-08-07 05:25:51"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "Residential",
+        "Modern Villa · Delhi NCR",
+        "10 kW · On-grid",
+        "",
+        1,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Residential",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        2,
+        "Commercial",
+        "Retail Campus · Noida",
+        "120 kW · EPC",
+        "",
+        2,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Commercial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        3,
+        "Industrial",
+        "Sivanta Spuntex · Kashipur",
+        "3,400 kW · Industrial EPC",
+        "",
+        3,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        4,
+        "Industrial",
+        "Savarna Industry · Madurai",
+        "1,075 kW · Tamil Nadu",
+        "",
+        4,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        5,
+        "Industrial",
+        "HIIMS · Lucknow",
+        "700 kW · Uttar Pradesh",
+        "",
+        5,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        6,
+        "Industrial",
+        "Metro Poly Film · Jhajjar",
+        "300 kW · Haryana",
+        "",
+        6,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        7,
+        "Industrial",
+        "Balaji Pack · Greater Noida",
+        "250 kW · Uttar Pradesh",
+        "",
+        7,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        8,
+        "Industrial",
+        "Sudhir Automotive · Rohtak",
+        "113 kW · Haryana",
+        "",
+        8,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        9,
+        "Industrial",
+        "Bawana Industrial Area",
+        "160, 180 & 300 kW · Multiple projects",
+        "",
+        9,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Industrial",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_projects (id,category,title,meta,image_url,sort_order,is_active,created_at,updated_at,project_type,css_class) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        10,
+        "Residential",
+        "Urban Home · Gurugram",
+        "8 kW · Hybrid",
+        "",
+        10,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Residential",
+        ""
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_testimonials (id,company,quote_text,customer_name,customer_role,initials,sort_order,is_active,created_at,updated_at,person_name,person_role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "SIVANTA SPUNTEX",
+        "Fantastic service from Aisen Solar Solutions. The installation was smooth, the team was professional, and my electricity bills have dropped. Thrilled to be using clean energy!",
+        "Vineet Ajitsariya",
+        "Director",
+        "VA",
+        1,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Vineet Ajitsariya",
+        "Director"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_testimonials (id,company,quote_text,customer_name,customer_role,initials,sort_order,is_active,created_at,updated_at,person_name,person_role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        2,
+        "SUNIL INDUSTRY",
+        "Great experience from start to finish. The team was sharp, the setup was smooth, and now my rooftop works harder than ever!",
+        "Shaleen Malpani",
+        "Director",
+        "SM",
+        2,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Shaleen Malpani",
+        "Director"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_testimonials (id,company,quote_text,customer_name,customer_role,initials,sort_order,is_active,created_at,updated_at,person_name,person_role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        3,
+        "BALAJI PACK",
+        "Top-notch work by Aisen Solar Solutions. Fast install, zero hassle, and the savings speak for themselves. Clean energy never looked so good!",
+        "Balaji Bimal Sultania",
+        "Director",
+        "BS",
+        3,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Balaji Bimal Sultania",
+        "Director"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_testimonials (id,company,quote_text,customer_name,customer_role,initials,sort_order,is_active,created_at,updated_at,person_name,person_role) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        4,
+        "JAINA MARKETING",
+        "Going solar with Aisen Solar Solutions was smart and simple. They are professional, reliable, and truly care about the environment.",
+        "Pradeep Jain",
+        "Director",
+        "PJ",
+        4,
+        1,
+        "2026-08-04 11:08:51",
+        "2026-08-07 05:11:45",
+        "Pradeep Jain",
+        "Director"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_blog_posts (id,title,slug,excerpt,content,category,author_name,featured_image,seo_title,seo_description,is_published,published_at,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        1,
+        "Solar Energy & Solar Panel Industry 2026: Top 5 Trending Topics",
+        "solar-energy-solar-panel-industry-2026-top-5-trending-topics",
+        "Bharat ke solar sector me aane wale top 5 trends ke baare me jaaniye—PM Surya Ghar Scheme, TOPCon panels, hybrid inverters, aur C&I solar solutions jo aapke bijli ke bill ko kam karne me madad karte hain.",
+        "Solar Energy & Solar Panel Industry 2026: Top 5 Trending Topics\r\nभारत में सोलर एनर्जी सेक्टर तेजी से आगे बढ़ रहा है। Ministry of New and Renewable Energy (MNRE) के अनुसार, पिछले चार सालों में भारत का सोलर पावर जनरेशन लगभग 138% बढ़ा है। तकनीक में प्रगति और सरकारी योजनाओं के कारण अब हर कोई अपने घर और बिज़नेस के लिए सोलर सॉल्यूशन चुन रहा है।\r\n\r\nAisen Solar Solutions के इस ब्लॉग में जानिए सोलर पैनल और सोलर एनर्जी इंडस्ट्री के 5 सबसे ट्रेंडिंग टॉपिक्स:\r\n\r\n1. PM Surya Ghar: Muft Bijli Yojana aur Residential Rooftop Boom\r\nभारत सरकार की PM Surya Ghar Muft Bijli Yojana के तहत देश भर में रेजिडेंशियल रूफटॉप सोलर लगाने के लिए सब्सिडी दी जा रही है।\r\n\r\nKey Highlight: 3kW तक के सिस्टम पर ₹78,000 तक की डायरेक्ट सब्सिडी।\r\n\r\nImpact: बिजली बिल में 80-90% तक की कमी और आसान जीरो-इंटरेस्ट EMI ऑप्शंस।\r\n\r\n2. Next-Gen Solar Panels: TOPCon aur Bifacial Technology\r\nपारंपरिक P-type PERC सोलर पैनल्स की जगह अब N-type TOPCon (Tunnel Oxide Passivated Contact) और Bifacial सोलर पैनल्स ले रहे हैं।\r\n\r\nHigh Efficiency: ये पैनल्स कम धूप और ज्यादा तापमान में भी बेहतर परफॉरमेंस देते हैं।\r\n\r\nDouble Generation: Bifacial पैनल्स सामने और पीछे दोनों तरफ से रोशनी एब्जॉर्ब करके 10-20% तक ज्यादा बिजली बनाते हैं।\r\n\r\n3. Smart Hybrid Inverters aur BESS (Battery Energy Storage Systems)\r\nअब सोलर केवल दिन में पावर देने तक सीमित नहीं है। BESS Technology और Hybrid Inverters के साथ 24/7 बिना किसी रुकावट के बिजली पाई जा सकती है।\r\n\r\nLiFePO4 Batteries: लंबी लाइफ और सुरक्षित लिथियम-आयन बैटरियां अब ग्रिड कटऑफ होने पर भी बैकअप देती हैं।\r\n\r\nReal-time Monitoring: मोबाइल ऐप के जरिए अपनी एनर्जी जनरेशन और कंजम्पशन को लाइव ट्रैक किया जा सकता है।\r\n\r\n4. Commercial & Industrial (C&I) Solar EPC\r\nफैक्ट्री, वेयरहाउस, ऑफिस और रिटेल आउटलेट्स अब अपने ऑपरेटिंग कॉस्ट्स (OpEx) को घटाने के लिए कमर्शियल रूफटॉप सोलर EPC सॉल्यूशंस अपना रहे हैं।\r\n\r\nTax Benefits: Accelerated Depreciation (AD) और टैक्स छूट के कारण बिज़नेस का ROI 3 से 4 साल में निकल आता है।\r\n\r\nLong-term Value: 25 साल तक की पैनल वारंटी के साथ बिज़नेस के लिए फिक्स्ड और सस्ती बिजली की गारंटी मिलती है।\r\n\r\n5. Domestic Manufacturing & Make in India (ALMM & PLI Schemes)\r\nभारत में सोलर मॉड्यूल्स और सेल्स का निर्माण तेजी से बढ़ा है। Press Information Bureau के आंकड़ों के मुताबिक, भारत की सोलर मॉड्यूल मैन्युफैक्चरिंग क्षमता 170+ GW के पार पहुँच गई है।\r\n\r\nLocal Quality Assurance: ALMM (Approved List of Models and Manufacturers) गाइडलाइंस के तहत लोकल मेड, हाई-क्वालिटी पैनल्स की उपलब्धता बढ़ी है।\r\n\r\nTrust & Service: Value Plus Retail के बैकअप के साथ Aisen Solar Solutions ग्राहकों को फिजिकल स्टोर्स और आफ्टर-सेल्स सपोर्ट की सुविधा देता है।\r\n\r\nConclusion\r\nसोलर एनर्जी अब सिर्फ एक पर्यावरण-अनुकूल विकल्प नहीं, बल्कि एक समझदारी भरा वित्तीय निवेश बन चुका है। सही टेक्नोलॉजी और भरोसेमंद पार्टनर्स के साथ आप अपने घर या बिज़नेस को एनर्जी-इंडिपेंडेंट बना सकते हैं।\r\n\r\nअपने छत के लिए सोलर जनरेशन का अनुमान लगाने या फ्री साइट ऑडिट बुक करने के लिए विजिट करें: Aisen Solar Solutions",
+        "Solar Insights",
+        "Aisen Solar Team",
+        null,
+        "Top 5 Solar Energy Trends 2026 | Aisen Solar Solutions",
+        "Solar energy aur solar panel industry 2026 ke top 5 trends jaaniye. PM Surya Ghar Yojana, TOPCon panels aur hybrid inverters se apne bijli ka bill kam karein.",
+        1,
+        "2026-08-06 23:40:17",
+        "2026-08-07 06:40:17",
+        "2026-08-07 06:41:07"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_blog_posts (id,title,slug,excerpt,content,category,author_name,featured_image,seo_title,seo_description,is_published,published_at,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        2,
+        "Solar Energy & Solar Panel Industry 2026: Top 6 Trending Topics",
+        "solar-energy-solar-panel-industry-2026-top-6-trending-topics",
+        "PM Surya Ghar Yojana, TOPCon panels, hybrid battery storage, Floating Solar, aur EV charging integration jaise top 6 solar trends ke baare me jaaniye jo 2026 me energy sector ko badal rahe hain.",
+        "भारत में सोलर एनर्जी सेक्टर तेजी से आगे बढ़ रहा है। [Ministry of New and Renewable Energy (MNRE)](https://energy.economictimes.indiatimes.com/news/power/indias-solar-power-generation-jumps-138-in-four-years-mnre/132858584) के आंकड़ों के अनुसार, पिछले चार वर्षों में भारत का सोलर पावर जनरेशन लगभग 138% बढ़ा है। स्वदेशी मैन्युफैक्चरिंग, नई टेक्नोलॉजी और सरकार की आकर्षक योजनाओं के कारण अब रेजिडेंशियल, कमर्शियल और एग्रीकल्चरल सेक्टर्स में सोलर एडॉप्शन नए रिकॉर्ड बना रहा है।\r\n\r\n[Aisen Solar Solutions](https://www.aisensolarsolutions.com/) के इस ब्लॉग में जानिए सोलर पैनल और सोलर एनर्जी इंडस्ट्री के टॉप 6 ट्रेंडिंग टॉपिक्स:\r\n\r\n---\r\n\r\n### 1. PM Surya Ghar: Muft Bijli Yojana aur Residential Solar Boom\r\nभारत सरकार की [PM Surya Ghar Muft Bijli Yojana](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293256&reg=48&lang=1) के तहत देश भर में रेजिडेंशियल रूफटॉप सोलर लगाने के लिए आकर्षक सब्सिडी दी जा रही है।\r\n* **Key Benefit:** 3kW तक के सिस्टम पर ₹78,000 तक की डायरेक्ट सब्सिडी।\r\n* **Impact:** बिजली बिल में 80-90% तक की कमी और zero-interest EMI ऑप्शंस के जरिए आसान सोलर इंस्टालेशन।\r\n\r\n---\r\n\r\n### 2. Next-Gen TOPCon aur Bifacial Solar Panels\r\nट्रेडिशनल PERC पैनल्स की जगह अब N-type TOPCon (Tunnel Oxide Passivated Contact) और Bifacial सोलर पैनल्स मार्केट में डोमिनेट कर रहे हैं।\r\n* **High Efficiency:** ये पैनल्स कम धूप और ज्यादा तापमान में भी बेहतर परफॉरमेंस देते हैं।\r\n* **Dual-Sided Generation:** Bifacial पैनल्स फ्रंट और बैक दोनों तरफ से लाइट एब्जॉर्ब करके 10-20% तक ज्यादा बिजली जनरेट करते हैं।\r\n\r\n---\r\n\r\n### 3. Smart Hybrid Inverters aur BESS (Battery Storage Systems)\r\nसोलर एनर्जी अब दिन तक सीमित नहीं है। Smart Hybrid Inverters और Lithium (LiFePO4) Battery Energy Storage Systems (BESS) के साथ 24/7 पावर बैकअप पाना आसान हो गया है।\r\n* **Uninterrupted Backup:** ग्रिड कट-ऑफ होने पर भी बैटरी बैकअप से बिजली मिलती रहती है।\r\n* **App Monitoring:** रियल-टाइम मोबाइल ऐप मॉनिटरिंग से एनर्जी जनरेशन और कंजम्पशन को आसानी से ट्रैक किया जा सकता है।\r\n\r\n---\r\n\r\n### 4. Floating Solar & Pradhan Mantri Surya Sarovar Yojana\r\nजमीन की कमी को पूरा करने के लिए अब जलाशयों (reservoirs) और वॉटर बॉडीज पर सोलर पैनल्स लगाने का ट्रेंड बढ़ रहा है",
+        "Solar Insights",
+        "Aisen Solar Team",
+        null,
+        "Top 6 Solar Energy Trends 2026 | Aisen Solar Solutions",
+        "Solar energy aur solar panel industry 2026 ke top 6 trends jaaniye. PM Surya Ghar, TOPCon panels, hybrid storage aur EV charging integration se apni bijli bachat karein.",
+        1,
+        "2026-08-06 23:53:39",
+        "2026-08-07 06:53:18",
+        "2026-08-07 06:53:39"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_blog_posts (id,title,slug,excerpt,content,category,author_name,featured_image,seo_title,seo_description,is_published,published_at,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        3,
+        "Solar Energy & Solar Panel Industry 2026: Top 4 Trending Topics",
+        "solar-energy-solar-panel-industry-2026-top-4-trending-topics",
+        "Discover the top 4 trends driving the solar energy industry in 2026—from PM Surya Ghar subsidies and TOPCon panels to hybrid battery storage and floating solar projects.",
+        "The solar energy sector in India is experiencing rapid momentum. According to official data from the [Ministry of New and Renewable Energy (MNRE)](https://energy.economictimes.indiatimes.com/news/power/indias-solar-power-generation-jumps-138-in-four-years-mnre/132858584), India's solar power generation surged by nearly 138% over the last four years. Driven by expanding domestic manufacturing, technological advancements, and supportive government policies, solar adoption is setting new records across residential, commercial, and agricultural sectors.\r\n\r\nIn this article, [Aisen Solar Solutions](https://www.aisensolarsolutions.com/) highlights the top 4 trending topics shaping the solar panel and energy industry:\r\n\r\n---\r\n\r\n### 1. PM Surya Ghar Yojana: The Residential Rooftop Solar Revolution\r\nThe Government of India's flagship scheme, [PM Surya Ghar Muft Bijli Yojana](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293256&reg=48&lang=1), offers direct subsidies to accelerate residential rooftop solar installations nationwide.\r\n* **Key Benefit:** Direct financial subsidy of up to ₹78,000 for residential systems up to 3kW.\r\n* **Impact:** Reduces monthly electricity bills by 80–90% while offering zero-interest EMI financing options to make installations affordable.\r\n\r\n---\r\n\r\n### 2. TOPCon and Bifacial Panels: The Next-Gen Solar Technology\r\nTraditional PERC solar panels are being rapidly succeeded by N-type TOPCon (Tunnel Oxide Passivated Contact) and Bifacial solar panel technologies.\r\n* **Higher Efficiency:** TOPCon modules deliver superior performance under high-temperature conditions and low ambient light.\r\n* **Dual-Sided Generation:** Bifacial panels absorb sunlight from both the front and rear surfaces, yielding 10–20% additional energy compared to standard modules.\r\n\r\n---\r\n\r\n### 3. Smart Hybrid Inverters and BESS: 24/7 Uninterrupted Backup\r\nSolar power generation is no longer limited to daytime hours. Smart hybrid inverters combined with Lithium Iron Phosphate (LiFePO4) Battery Energy Storage Systems (BESS) enable reliable, round-the-clock power backup.\r\n* **Grid Independence:** Ensures continuous power supply even during grid outages.\r\n* **Smart Monitoring:** Real-time mobile application integration allows homeowners and businesses to monitor energy generation and consumption seamlessly.\r\n\r\n---\r\n\r\n### 4. Floating Solar & PM Surya Sarovar Yojana: Clean Energy on Water\r\nTo overcome land acquisition constraints, floating solar photovoltaic (FSPV) installations on water reservoirs and industrial ponds are gaining significant scale.\r\n* **Government Support:** The Union Cabinet approved the [Pradhan Mantri Surya Sarovar Yojana (PM-SSY)](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293256&reg=48&lang=1) with an outlay of ₹5,070 crore to develop 5,000 MW of floating solar capacity paired with battery storage.\r\n* **Dual Advantage:** Preserves valuable land resources while simultaneously reducing water evaporation from reservoirs.\r\n\r\n---\r\n\r\n## Conclusion\r\n\r\nAdopting solar power provides long-term energy security alongside substantial financial savings. Partnering with experienced engineering teams ensures maximum yield and reliable performance. \r\n\r\nTo estimate your roof's solar potential or to request a complimentary site evaluation, visit [Aisen Solar Solutions](https://www.aisensolarsolutions.com/).",
+        "Solar Insights",
+        "Aisen Solar Team",
+        "/uploads/blog/20260807-f6788047b89b2161.jpg",
+        "Top 4 Solar Energy Industry Trends 2026 | Aisen Solar Solutions",
+        "Explore the top 4 solar industry trends in 2026: PM Surya Ghar Yojana, TOPCon & Bifacial modules, hybrid battery storage, and floating solar technology.",
+        1,
+        "2026-08-06 23:57:15",
+        "2026-08-07 06:57:13",
+        "2026-08-07 07:04:55"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_blog_posts (id,title,slug,excerpt,content,category,author_name,featured_image,seo_title,seo_description,is_published,published_at,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        4,
+        "Solar Panel Maintenance aur Cleaning Tips: Maximize Karein Apni Solar Efficiency",
+        "solar-panel-maintenance-aur-cleaning-tips",
+        "सोलर पैनल की सही सफाई और देखभाल से बिजली का उत्पादन 15-30% तक बढ़ाया जा सकता है। जानें सुरक्षित क्लीनिंग टिप्स, सही समय और AMC सर्विस के फायदे।",
+        "<p>सोलर पैनल लगाना एक दीर्घकालिक निवेश (long-term investment) है जो आपके बिजली बिल को महत्वपूर्ण रूप से कम करता है। हालांकि, दिल्ली-एनसीआर और भारत के �<br>धिकांश हिस्सों में धूल, मिट्टी, स्मॉग और पक्षियों की बीट (bird droppings) के कारण सोलर पैनल्स की कार्यक्षमता 15% से 30% तक घट सकती है।</p><p><a href=\"https://www.aisensolarsolutions.com/\">Aisen Solar Solutions</a> आपके सोलर सिस्टम की �<br>धिकतम दक्षता (maximum efficiency) और लंबी उम्र सुनिश्चित करने के लिए कुछ महत्वपूर्ण Maintenance और Cleaning Tips साझा कर रहा है:</p><h3>1. सही समय पर करें सफाई (Clean at the Right Time)</h3><p>सोलर पैनल्स की सफाई हमेशा <strong>सुबह जल्दी (सुबह 9 बजे से पहले)</strong> या <strong>शाम को (शाम 5 बजे के बाद)</strong> करनी चाहिए।</p><ul><li><strong>Thermal Shock से बचाव:</strong> दोपहर में जब पैनल्स सूरज की धूप में �</li></ul><p>त्यधिक गर्म (60°C से �<br>धिक) होते हैं, तब उन पर ठंडा पानी डालने से कांच में दरारें (cracks) आ सकती हैं।</p><ul><li><strong>दाग-धब्बों से मुक्ति:</strong> ठंडे मौसम में पानी धीरे-धीरे सूखता है, जिससे पैनल्स पर पानी के निशान (streaks) नहीं बनते।</li></ul><hr><h3>2. सही पानी और उपकरणों का उपयोग करें (Use the Right Water &amp; Tools)</h3><ul><li><strong>Soft या Filtered Water:</strong> कड़े पानी (Hard Tap Water) में कैल्शियम और मैग्नीशियम जैसे मिनरल्स होते हैं, जो सूखने के बाद शीशे पर सफेद परत छोड़ देते हैं। इसलिए साफ या आरओ (RO) पानी का ही उपयोग करें।</li><li><strong>Microfiber Cloth या Squeegee:</strong> सफाई के लिए स्पंज, माइक्रोफाइबर ब्रश या वाइपर (squeegee) का उपयोग करें।</li><li><strong>Avoid Abrasives &amp; Pressure Washers:</strong> लोहे के जूने (wire wool), सख्त ब्रश या हाई-प्रेशर वॉटर जेट (pressure washer) का उपयोग न करें। इससे पैनल्स की Anti-Reflective Coating खराब हो सकती है।</li></ul><hr><h3>3. बर्ड ड्रॉपिंग्स और जिद्दी दाग हटाएं (Remove Bird Droppings Promptly)</h3><p>पक्षियों की बीट सोलर सेल पर 100% छाया (shade) पैदा करती है, जिससे वहाँ \"Hotspots\" बन जाते हैं। इससे वह विशेष सेल ज्यादा गर्म होकर स्थायी रूप से खराब हो सकता है।</p><ul><li><strong>Solution:</strong> जिद्दी दागों को खुरचने के बजाय उन पर पानी डालकर कुछ देर के लिए भिगो दें और फिर हल्के हाथ से माइक्रोफाइबर कपड़े से साफ करें।</li></ul><hr><h3>4. पैनल्स पर कभी पैर न रखें (Never Walk on Solar Panels)</h3><p>सफाई करते समय कभी भी सोलर पैनल्स के ऊपर खड़े न हों और न ही उन पर पैर रखें।</p><ul><li><strong>Micro-cracks Risk:</strong> शरीर के भार से सिलिकॉन सेल्स में सूक्ष्म दरारें (micro-cracks) आ जाती हैं जो नग्न आंखों से नहीं दिखतीं, लेकिन समय के साथ पैनल को पूरी तरह निष्क्रिय बना देती हैं।</li></ul><hr><h3>5. इनवर्टर और वायरिंग की नियमित जांच (Inspect Inverter &amp; Wiring)</h3><p>सोलर सिस्टम केवल पैनल्स तक सीमित नहीं है, इसके �<br>न्य घटकों की देखभाल भी जरूरी है:</p><ul><li><strong>Inverter Cleaning:</strong> इनवर्टर के वेंटिलेशन ग्रिल से महीने में एक बार धूल साफ करें ताकि वह ओवरहीट न हो।</li><li><strong>Wiring &amp; Junction Box:</strong> तारों में ढीलेपन या चूहे द्वारा काटे जाने के निशानों की जांच करें।</li></ul><hr><h3>6. AMC (Annual Maintenance Contract) का लाभ उठाएं</h3><p>�<br>गर आपकी छत तक पहुंचना मुश्किल या �<br>सुरक्षित है, तो पेशेवर देखभाल सबसे सुरक्षित विकल्प है। <a href=\"https://theprint.in/ani-press-releases/value-plus-retail-launches-aisen-solar-pioneering-trusted-rooftop-solar-solutions-in-uttar-pradesh/2563834/\">Value Plus Retail</a> के विशाल नेटवर्क द्वारा समर्थित <a href=\"https://www.aisensolarsolutions.com/\">Aisen Solar Solutions</a> आपको स्ट्रक्चर्ड AMC सर्विसेज प्रदान करता है, जिसमें शामिल हैं:</p><ul><li>शेड्यूल पेशेवर सफाई (Scheduled Cleaning)</li><li>इलेक्ट्रिकल वायर व इनवर्टर हेल्थ चेक�</li></ul><p>प</p><ul><li>रियल-टाइम जनरेशन मॉनिटरिंग</li></ul><hr><h2>Conclusion</h2><p>नियमित सफाई और सही रखरखाव से आप �<br>पने सोलर सिस्टम से 25 वर्षों तक �<br>धिकतम ऊर्जा उत्पादन प्राप्त कर सकते हैं।</p><p>�<br>पने सोलर सिस्टम के AMC या फ्री मेंटेनेंस गाइडेंस के लिए आज ही संपर्क करें: <a href=\"https://www.aisensolarsolutions.com/\">Aisen Solar Solutions</a></p>",
+        "Solar Insights",
+        "Aisen Solar Team",
+        "/uploads/blog/20260807-06950cc960ec24d8.jpg",
+        "Solar Panel Cleaning & Maintenance Tips | Aisen Solar Solutions",
+        "सोलर पैनल मेंटेनेंस और क्लीनिंग टिप्स जानें। सही सफाई के तरीकों, उपयुक्त समय और AMC सर्विस के साथ अपने सोलर पैनल की एफिशिएंसी बढ़ाएं।",
+        1,
+        "2026-08-07 00:01:24",
+        "2026-08-07 07:01:24",
+        "2026-09-18 09:02:16"
+      ]
+    },
+    {
+      "sql": "INSERT OR IGNORE INTO cms_blog_posts (id,title,slug,excerpt,content,category,author_name,featured_image,seo_title,seo_description,is_published,published_at,created_at,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "params": [
+        9,
+        "सोलर पैनल इंस्टॉलेशन: घर, बिज़नेस और इंडस्ट्री के लिए संपूर्ण सोलर समाधान | Aisen Solar Solutions",
+        "solar-panel-installation-epc-services-india",
+        "बढ़ते बिजली बिल से बचत और स्वच्छ ऊर्जा की ओर बढ़ने के लिए सोलर एक प्रभावी विकल्प है। जानिए Aisen Solar Solutions के Residential Rooftop Solar, Commercial Solar, Industrial Solar EPC, Net Metering, Subsidy Assistance और AMC जैसे end-to-end solar services के बारे में।",
+        "<p>आज बिजली की बढ़ती लागत के बीच सोलर ऊर्जा <b>घर, बिज़नेस और इंडस्ट्री के लिए लंबी अवधि की\r\nऊर्जा बचत</b> का एक व्यावहारिक विकल्प बन चुकी है। सही डिजाइन, गुणवत्तापूर्ण उपकरण\r\nऔर प्रोफेशनल इंस्टॉलेशन के साथ rooftop solar system न केवल बिजली के खर्च को कम करने\r\nमें मदद करता है, बल्कि साफ और renewable energy अपनाने का आसान रास्ता भी बनाता है।</p>\r\n\r\n<p><b>Aisen\r\nSolar Solutions</b> residential, commercial, industrial\r\nऔर institutional जरूरतों के लिए end-to-end solar solutions उपलब्ध कराता है।\r\nSite survey से लेकर system design, installation, net metering assistance,\r\nsubsidy guidance, testing, commissioning और after-sales support तक पूरा प्रोजेक्ट\r\nएक structured process के साथ संभाला जाता है।</p>\r\n\r\n<h2>सोलर पैनल इंस्टॉलेशन क्यों करवाएं?</h2>\r\n\r\n<p><b>Solar\r\npanel installation</b> का सबसे बड़ा लाभ यह है कि आपकी छत\r\nया उपलब्ध open space बिजली पैदा करने वाली asset में बदल जाती है। दिन के समय बनने\r\nवाली solar electricity आपकी grid dependence कम कर सकती है और लंबे समय में\r\nelectricity cost को अधिक predictable बनाने में मदद कर सकती है।</p>\r\n\r\n<p>·        \r\n<b>बिजली बिल में संभावित बचत</b> और grid से खरीदी\r\nजाने वाली electricity पर निर्भरता कम करने में मदद।</p>\r\n\r\n<p>·        \r\n<b>Unused rooftop space का बेहतर उपयोग</b> करके\r\nवहीं से clean energy generation।</p>\r\n\r\n<p>·        \r\n<b>Renewable energy adoption</b> के जरिए\r\nenvironmental impact कम करने की दिशा में योगदान।</p>\r\n\r\n<p>·        \r\n<b>Commercial और industrial users</b> के लिए\r\noperating electricity cost को optimize करने का अवसर।</p>\r\n\r\n<p>·        \r\n<b>Long-term energy planning</b> के लिए एक स्थायी\r\nऔर scalable solution।</p>\r\n\r\n<h2>हर जरूरत के लिए संपूर्ण Solar\r\nSolutions</h2>\r\n\r\n<h2>1. Residential Rooftop Solar</h2>\r\n\r\n<p><b>Home\r\nrooftop solar system</b> उन परिवारों के लिए उपयुक्त है जो\r\nअपने monthly electricity bill को कम करना चाहते हैं और अपने घर की छत से clean\r\nenergy generate करना चाहते हैं। Aisen Solar Solutions site survey, suitable\r\nsystem capacity selection, installation, net metering support और applicable\r\nsubsidy process में सहायता प्रदान करता है।</p>\r\n\r\n<p><i>सही\r\nresidential solar system चुनते समय roof area, electricity consumption, shadow\r\ncondition, sanctioned load और future electricity requirement जैसे factors को ध्यान\r\nमें रखना जरूरी होता है।</i></p>\r\n\r\n<h2>2. Commercial Solar Solutions</h2>\r\n\r\n<p><b>Commercial\r\nsolar installation</b> offices, hotels, hospitals,\r\nschools, showrooms, warehouses और अन्य commercial properties के लिए उपयोगी है, जहां\r\ndaytime electricity consumption अधिक होता है। Customized rooftop solar system के\r\nमाध्यम से businesses अपने operational electricity expenses को बेहतर तरीके से\r\nmanage कर सकते हैं।</p>\r\n\r\n<h2>3. Industrial Solar EPC</h2>\r\n\r\n<p><b>Industrial\r\nsolar EPC services</b> large factories, manufacturing\r\nunits, warehouses और high-load facilities के लिए engineering-focused solution प्रदान\r\nकरती हैं। इसमें Engineering, Procurement और Construction के साथ electrical\r\ndesign, mounting structure planning, installation, testing और commissioning शामिल\r\nहो सकते हैं।</p>\r\n\r\n<p><i>Industrial\r\nsolar project में सिर्फ panel capacity महत्वपूर्ण नहीं होती; <b>system safety, generation efficiency, load\r\nprofile और long-term maintainability</b> भी उतने ही जरूरी factors हैं।</i></p>\r\n\r\n<h2>4. Institutional Solar\r\nSolutions</h2>\r\n\r\n<p><b>Schools,\r\ncolleges, universities, hospitals और institutional campuses</b> के लिए solar installation energy cost reduction और sustainability\r\ngoals दोनों को support कर सकता है। Requirement के अनुसार rooftop या\r\nlarger-capacity system design किया जा सकता है।</p>\r\n\r\n<h2>Aisen Solar Solutions की\r\nEnd-to-End Solar Services</h2>\r\n\r\n<h2>Solar Site Survey</h2>\r\n\r\n<p>किसी भी solar project की शुरुआत सही site\r\nassessment से होती है। Roof area, orientation, shadow, existing electrical\r\nsetup, electricity consumption और structural suitability का review करके\r\nproposed solar capacity तय करने में मदद मिलती है।</p>\r\n\r\n<h2>Solar System Design &amp;\r\nEngineering</h2>\r\n\r\n<p>Project requirement के अनुसार module\r\nlayout, inverter sizing, cable routing, protection system और other electrical\r\ncomponents की planning की जाती है, ताकि system सुरक्षित और efficient तरीके से काम\r\nकर सके।</p>\r\n\r\n<h2>Professional Solar Panel\r\nInstallation</h2>\r\n\r\n<p>Installation phase में solar panels,\r\nmounting structure, inverter, DC/AC cabling, protection devices और supporting\r\nelectrical components को planned design के अनुसार install किया जाता है।</p>\r\n\r\n<h2>Net Metering Assistance</h2>\r\n\r\n<p>जहां लागू हो, rooftop solar users के लिए\r\nnet metering process महत्वपूर्ण हो सकता है। Aisen Solar Solutions applicable\r\ndocumentation और coordination process में सहायता उपलब्ध कराता है।</p>\r\n\r\n<h2>Solar Subsidy Assistance</h2>\r\n\r\n<p>Eligible residential customers के लिए\r\napplicable rooftop solar subsidy procedures को समझना और required documentation पूरा\r\nकरना आसान बनाने के लिए process guidance दी जाती है। Subsidy eligibility और\r\namount संबंधित सरकारी नियमों/योजनाओं पर निर्भर करते हैं।</p>\r\n\r\n<h2>Solar EPC Services</h2>\r\n\r\n<p>Commercial और industrial projects के लिए\r\nengineering, procurement, installation, testing और commissioning को एक\r\nintegrated EPC process के रूप में manage किया जा सकता है।</p>\r\n\r\n<h2>Testing &amp; Commissioning</h2>\r\n\r\n<p>Project handover से पहले electrical safety,\r\nconnections, inverter operation और system performance से जुड़े आवश्यक checks किए\r\nजाते हैं, ताकि installation सही तरीके से operate कर सके।</p>\r\n\r\n<h2>After-Sales Support &amp; Solar\r\nAMC</h2>\r\n\r\n<p>Solar system की long-term performance के लिए\r\nperiodic inspection और maintenance उपयोगी होती है। After-sales support और\r\nAnnual Maintenance Contract (AMC) के माध्यम से preventive checks,\r\ntroubleshooting और maintenance assistance उपलब्ध कराई जा सकती है।</p>\r\n\r\n<h2>Solar Project के लिए सही\r\nEquipment और Brands का चुनाव</h2>\r\n\r\n<p>Solar system की performance केवल panel पर निर्भर\r\nनहीं करती। <b>solar modules, inverter,\r\nmounting structure, cables और protection equipment</b> का सही combination जरूरी\r\nहै। Project specifications और technical suitability के आधार पर Aisen Solar\r\nSolutions Waaree, Tata Power Solar, Vikram Solar, Adani Solar, Havells,\r\nSungrow, Growatt, Enphase, Delta, GoodWe और Polycab जैसे leading brands के\r\nproducts/solutions के साथ काम कर सकता है।</p>\r\n\r\n<p><i>Final\r\nbrand और equipment selection project requirement, technical compatibility,\r\navailability और approved specifications के अनुसार किया जाना चाहिए।</i></p>\r\n\r\n<h2>हमारे प्रमुख Solar Projects</h2>\r\n\r\n<p>Aisen Solar Solutions के project portfolio में\r\nअलग-अलग capacities और locations पर commercial तथा industrial solar\r\ninstallations शामिल हैं, जैसे:</p>\r\n\r\n<p>·        \r\n<b>3400 kW - Sivanta Spuntex, Kashipur</b></p>\r\n\r\n<p>·        \r\n<b>1075 kW - Savarna, Madurai</b></p>\r\n\r\n<p>·        \r\n<b>700 kW - HIIMS, Lucknow</b></p>\r\n\r\n<p>·        \r\n<b>300 kW - Metro Poly Film, Jhajjar</b></p>\r\n\r\n<p>·        \r\n<b>250 kW - Balaji Pack, Greater Noida</b></p>\r\n\r\n<p>·        \r\n<b>113 kW - Sudhir Automotive, Rohtak</b></p>\r\n\r\n<p>·        \r\n<b>Bawana में multiple large-scale solar installations</b></p>\r\n\r\n<h2>Solar Installation Process कैसे\r\nकाम करता है?</h2>\r\n\r\n<p><b>1. Consultation - </b>आपकी बिजली\r\nकी खपत, property type और solar requirement को समझा जाता है।</p>\r\n\r\n<p><b>2. Site Survey - </b>Roof/site\r\ncondition, shadow और available installation area का assessment किया जाता है।</p>\r\n\r\n<p><b>3. System Design - </b>Suitable\r\ncapacity, equipment configuration और installation layout तैयार किया जाता है।</p>\r\n\r\n<p><b>4. Proposal &amp; Approval - </b>Project requirement के अनुसार technical और commercial proposal साझा किया\r\nजाता है।</p>\r\n\r\n<p><b>5. Installation - </b>Approved\r\ndesign के आधार पर solar system professionally install किया जाता है।</p>\r\n\r\n<p><b>6. Testing &amp; Commissioning - </b>System safety और operation से जुड़े आवश्यक checks के बाद\r\ncommissioning की जाती है।</p>\r\n\r\n<p><b>7. Net Metering &amp; Documentation Support - </b>जहां applicable हो, required net metering/documentation process में\r\nassistance दी जाती है।</p>\r\n\r\n<p><b>8. After-Sales Support - </b>Installation\r\nके बाद maintenance, troubleshooting और AMC requirements के लिए support उपलब्ध कराया\r\nजाता है।</p>\r\n\r\n<h2>Solar System लगवाने से पहले किन\r\nबातों पर ध्यान दें?</h2>\r\n\r\n<p>·        \r\nअपनी average monthly\r\nelectricity consumption और electricity bill pattern समझें।</p>\r\n\r\n<p>·        \r\nRoof पर available shadow-free\r\narea का सही assessment करवाएं।</p>\r\n\r\n<p>·        \r\nSystem capacity केवल roof size के\r\nआधार पर नहीं, actual consumption और requirement के अनुसार चुनें।</p>\r\n\r\n<p>·        \r\nModule और inverter के साथ\r\nbalance-of-system components की quality भी जांचें।</p>\r\n\r\n<p>·        \r\nInstallation safety, earthing,\r\ncable protection और structural mounting को प्राथमिकता दें।</p>\r\n\r\n<p>·        \r\nNet metering, subsidy और local\r\napprovals के applicable rules की पुष्टि करें।</p>\r\n\r\n<p>·        \r\nAfter-sales support और\r\nmaintenance responsibility पहले से स्पष्ट रखें।</p>\r\n\r\n<h2>Aisen Solar Solutions क्यों चुनें?</h2>\r\n\r\n<p>Solar investment का वास्तविक लाभ तभी मिलता है\r\nजब system सही तरीके से designed, installed और maintained हो। Aisen Solar\r\nSolutions का focus सिर्फ equipment supply पर नहीं, बल्कि complete project\r\nexecution और long-term support पर है।</p>\r\n\r\n<p>·        \r\n<b>Residential, commercial, industrial और institutional solar solutions</b></p>\r\n\r\n<p>·        \r\n<b>Complete solar EPC execution</b></p>\r\n\r\n<p>·        \r\n<b>Customized system design and engineering</b></p>\r\n\r\n<p>·        \r\n<b>Professional installation and commissioning</b></p>\r\n\r\n<p>·        \r\n<b>Net metering और subsidy process assistance</b></p>\r\n\r\n<p>·        \r\n<b>Quality-focused components and system integration</b></p>\r\n\r\n<p>·        \r\n<b>After-sales technical support और AMC services</b></p>\r\n\r\n<h2>क्या Solar आपके लिए सही है?</h2>\r\n\r\n<p>यदि आपके घर, office, factory, school या\r\ncommercial property में पर्याप्त sunlight और suitable installation space उपलब्ध\r\nहै, तो rooftop solar system आपके electricity expenses को optimize करने का एक प्रभावी\r\nतरीका हो सकता है। <b>सही निर्णय लेने के लिए\r\nसबसे पहला कदम professional site survey है।</b></p>",
+        "Solar Insights",
+        "Aisen Solar Team",
+        "/uploads/blog/20260918-735fec0f26ac92a0.png",
+        "सोलर पैनल इंस्टॉलेशन और Solar EPC Services in India | Aisen Solar Solutions",
+        "घर, बिज़नेस और इंडस्ट्री के लिए भरोसेमंद Solar Panel Installation और Solar EPC Services पाएं। Aisen Solar Solutions के साथ Rooftop Solar, Net Metering, Subsidy Assistance, Testing, Commissioning और AMC की संपूर्ण सुविधा।",
+        1,
+        "2026-09-18 02:13:46",
+        "2026-09-18 09:13:46",
+        "2026-09-18 09:13:46"
+      ]
+    },
+    {
+      "sql": "CREATE TABLE IF NOT EXISTS cms_media (\n  media_key TEXT PRIMARY KEY,\n  content_type TEXT NOT NULL,\n  data BLOB NOT NULL,\n  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP\n);\n"
+    }
+  ]
+}

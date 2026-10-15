@@ -1,0 +1,15 @@
+# Secrets and local Cloudflare state
+.dev.vars
+.env
+.env.*
+!.env.example
+.wrangler/
+node_modules/
+# Customer and production exports; never commit
+migrations/0002_data.sql
+*enquiries*.sql
+*backup*.sql
+*backup*.zip
+public_html.zip
+*.log
+.DS_Store

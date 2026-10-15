@@ -1,45 +1,82 @@
-# Aisen Solar Solutions — Cloudflare migration
+# Aisen Solar Solutions — Cloudflare staging package
 
-This project migrates only website hosting. The domain remains registered at
-GoDaddy, and existing email records must remain unchanged.
+This package is deployed to the public **Cloudflare staging preview**. It is not ready for DNS cutover.
+
+## Safety boundaries
+
+- GoDaddy remains the domain registrar and active website host until separately approved cutover.
+- Do not change nameservers or production A/AAAA/CNAME records, MX, SPF, DKIM, DMARC, or email services.
+- The original database export contains personal enquiries. This ZIP deliberately excludes `migrations/0002_data.sql` and all live credentials.
+- Never push a real SQL enquiry export to a public GitHub repository.
 
 ## Components
 
-- Cloudflare Workers + Static Assets: existing website frontend
-- Cloudflare D1: CMS and enquiry data
-- Cloudflare R2: future CMS image uploads
-- GoDaddy email: unchanged
+- Cloudflare Worker + static assets (`public/`)
+- Cloudflare D1 for the website CMS, projects, blog and enquiry records
+- Cloudflare R2 for CMS uploads
+- Admin CMS at `/aisen-preview/admin/`
+- Contact API `/aisen-preview/api/content.php`
+- Enquiry API `/aisen-preview/api/enquiries.php`
+- Blog API `/aisen-preview/api/blogs.php`
+- Public blog at `/blog/`
 
-## Safety rules
+## Local checks
 
-1. Do not change nameservers or production DNS before staging acceptance.
-2. Preserve every MX, SPF, DKIM and DMARC record exactly.
-3. Never deploy `config.php`, PHP files, server logs or old database credentials.
-4. Take a final incremental database export immediately before production cutover.
-5. Keep the GoDaddy hosting active until the live site, forms, admin and blog are verified.
+`node --check src/index.js && node --check src/admin.js && node --check src/article.js`
 
-## Local preparation
+`npm test` (11 automated checks, including media routing, staging-only deployment guard and CSV safety)
 
-```sh
-npm install
-npm run db:convert
-npm run build:pages
-```
+Schema import for an empty staging DB: `migrations/0001_schema.sql`.
 
-## GitHub + Cloudflare Pages deployment
+## Cloudflare staging — manual setup required
 
-The repository intentionally excludes the converted production data migration.
-It contains application code, static assets and the empty D1 schema only.
+1. In Cloudflare, create a D1 database named `aisen-solar-staging` and R2 bucket named `aisen-solar-staging-media`.
+2. Replace `REPLACE_AFTER_D1_CREATION` in `wrangler.jsonc` with the **staging** D1 database ID.
+3. `npm install`
+4. `npx wrangler d1 migrations apply aisen-solar-staging --remote`
+5. Create secrets using `npx wrangler secret put ADMIN_EMAIL`, `npx wrangler secret put ADMIN_PASSWORD_HASH`, and `npx wrangler secret put SESSION_SECRET`. Use a **bcrypt password hash**, never plaintext.
+6. `npm run deploy:staging`; a safety check refuses deployment until the staging D1 ID is configured and blocks production-domain routes. Verify a **workers.dev** preview domain before any production domain connection.
+7. Test each item in `STAGING_CHECKLIST.md` before considering cutover.
 
-Cloudflare Pages build settings:
+### Restoring private CMS data
 
-- Build command: `npm run build:pages`
-- Build output directory: `dist`
-- Root directory: `/`
+Keep the MySQL source dump and converted D1 data export in a private location. For a secure import after staging is available:
 
-After the first build, add dashboard bindings named `DB` (D1) and `MEDIA` (R2),
-then import the private D1 data file outside GitHub.
+`npm run db:convert -- /absolute/private/aisen_enquiries.sql /absolute/private/aisen_data.sql`
 
-After Cloudflare authentication, create D1 and R2 resources, replace the D1
-placeholder in `wrangler.jsonc`, apply both migrations, and deploy to the
-workers.dev staging URL.
+Review the export for customer information; only then import via Cloudflare D1. Do not commit either SQL file to GitHub.
+
+## Changes in this recovery package
+
+- Recovered Cloudflare Worker/website/admin code from the prior migration ZIP.
+- Added conservative Markdown and HTML blog rendering for previously broken hyperlinks.
+- Kept rich content safe when preloaded into the Admin Blog Editor.
+- Fixed Worker-first routing for `/media/*`, `/blog`, and the Admin root, so uploaded R2 images are reachable.
+- Aligned the public blog list with the published-date checks already used by individual articles.
+- Hardened enquiry CSV export against spreadsheet formula injection.
+- Added tests and a deployment guard, plus explicit staging-only migration instructions.
+- Excluded the private data migration and non-web FTP metadata from the distributable.
+
+## Known limitations
+
+- The saved database snapshot has project records, but no project image paths in those records; photos require restored media or manual re-upload.
+- The enquiry API stores enquiries but does not send an email notification (`emailSent: false`).
+- Cloudflare authentication, D1/R2 resource creation, runtime tests and deployment have not been completed in this local-only review.
+- The static website frontend comes from an exported build, not its original editable Next.js source project.
+
+## Staging privacy and canonical Admin path
+
+- Added explicit `/aisen-preview/admin` to `/aisen-preview/admin/` redirect in the Worker.
+- Staging Worker responses and static assets both receive `X-Robots-Tag: noindex, nofollow` on workers.dev; this does not change production DNS or content headers.
+
+## R2 deferred (2026-10-13)
+
+R2 is optional and is not configured for this staging deployment. Existing bundled images remain available; new Admin image uploads are disabled until the MEDIA binding is configured. Text editing remains available after database and Admin setup. The staging D1 database is created and its ID is configured. Apply the empty schema and configure Admin secrets before runtime validation. No subscription has been activated.
+
+## CMS recovery and interface repair — 14 October 2026
+
+- Added a dedicated responsive Admin interface: sidebar, overview, compact record editors and grouped contact forms.
+- Recovery restores published website content once using the existing staging D1 binding. `INSERT OR IGNORE` preserves records already edited in staging; private enquiry records and credentials are excluded. Current public contact details, visibility choices and published articles were reconciled with the saved CMS backup.
+- Added image uploads without activating R2. Images are resized in the browser and saved in staging D1 with a 1 MiB server limit. Existing R2 support is retained.
+- No original project-photo records exist in the saved database or current production content API. Project photos must be supplied as original uploads; no stock photos are substituted for installations.
+- GoDaddy hosting, domain and email settings remain unchanged.

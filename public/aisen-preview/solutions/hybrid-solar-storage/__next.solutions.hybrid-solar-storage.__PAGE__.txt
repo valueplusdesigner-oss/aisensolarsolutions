@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[3351,["865","static/chunks/865-1ec8320a2a62c5fe.js","884","static/chunks/app/solutions/hybrid-solar-storage/page-5abcfbeabe24c066.js"],"default"]
+3:I[1872,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"kind":"hybrid"}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"NduO5CuLUOJkqpII_iyLM"}
+5:null

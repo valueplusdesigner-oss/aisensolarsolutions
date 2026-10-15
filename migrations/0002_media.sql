@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS cms_media (
+  media_key TEXT PRIMARY KEY,
+  content_type TEXT NOT NULL,
+  data BLOB NOT NULL,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
